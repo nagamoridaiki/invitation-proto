@@ -1,0 +1,23 @@
+
+syntax = "proto3";
+
+package invitaion;
+
+message Invitation {
+    int32 invitation_id    = 1;
+    string invitation_name = 2;
+    int32 user_id          = 3;
+}
+
+message GetInvitationRequest{
+    int32 user_id = 1;
+}
+
+message GetInvitationResponse {
+    Invitation user = 1;
+}
+
+
+service invitationService{
+    rpc GetInvitation (GetInvitationRequest) returns (GetInvitationResponse) {};
+}
