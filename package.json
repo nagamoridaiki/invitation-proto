@@ -1,0 +1,22 @@
+{
+  "name": "@nagamoridaiki/invitation-proto",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nagamoridaiki/invitation-proto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nagamoridaiki/invitation-proto/issues"
+  },
+  "homepage": "https://github.com/nagamoridaiki/invitation-proto#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
