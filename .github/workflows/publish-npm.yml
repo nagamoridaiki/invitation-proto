@@ -20,8 +20,7 @@ jobs:
       - name: Generate Protocol Buffers
         run: make -C proto generate
 
-      - name: Publish
+      - name: Publish to Private NPM Registry
         run: |
-          npx can-npm-publish --verbose && npm publish || echo "Does not publish"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          echo "//your-private-registry/:_authToken=\${{secrets.NPM_TOKEN}}" > ~/.npmrc
+          npm publish --registry=https://npm.pkg.github.com
