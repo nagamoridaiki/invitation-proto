@@ -31,5 +31,5 @@ jobs:
 
       - name: Publish to Private NPM Registry
         run: |
-          echo "npm.pkg.github.com/:_authToken=${{secrets.NPM_TOKEN} > ~/.npmrc
+          echo npm.pkg.github.com/:_authToken=${{secrets.NPM_TOKEN} > ~/.npmrc
           npm publish --registry=https://npm.pkg.github.com
