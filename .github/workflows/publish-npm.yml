@@ -17,7 +17,7 @@ jobs:
           node-version: 14
 
       - name: Set NPM_TOKEN
-        run: echo "//npm.pkg.github.com/:_authToken=\${{secrets.NPM_TOKEN}}" > ~/.npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${{secrets.NPM_TOKEN}}" > ~/.npmrc
 
       - name: Debug .npmrc
         run: cat ~/.npmrc
