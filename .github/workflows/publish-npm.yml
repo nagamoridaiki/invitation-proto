@@ -29,12 +29,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Debug .npmrc
-        run: cat ~/.npmrc
-
-      - name: Generate Protocol Buffers
-        run: make -C proto generate
-
       - name: Publish to Private NPM Registry
         run: |
           npm publish --registry=https://npm.pkg.github.com
