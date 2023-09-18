@@ -20,6 +20,8 @@ jobs:
         run: |
           echo "npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
           echo "@nagamoridaiki:registry=https://npm.pkg.github.com" >> ~/.npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Debug .npmrc
         run: cat ~/.npmrc
