@@ -6,9 +6,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: My first action
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Checkout code
         uses: actions/checkout@v2
@@ -29,5 +26,5 @@ jobs:
 
       - name: Publish to Private NPM Registry
         run: |
-          echo "//npm.pkg.github.com/:_authToken=\${{NPM_TOKEN}}" > ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=\${{secrets.NPM_TOKEN}}" > ~/.npmrc
           npm publish --registry=https://npm.pkg.github.com
