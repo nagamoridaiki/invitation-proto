@@ -14,8 +14,17 @@ jobs:
         with:
           node-version: 14
 
+      - name: Update npm
+        run: npm install -g npm
+
       - name: Install dependencies
         run: npm ci
+
+      - name: Debug NPM_TOKEN
+        run: echo "NPM_TOKEN: ${{secrets.NPM_TOKEN}}"
+
+      - name: Debug .npmrc
+        run: cat ~/.npmrc
 
       - name: Generate Protocol Buffers
         run: make -C proto generate
