@@ -31,4 +31,4 @@ jobs:
 
       - name: Publish to Private NPM Registry
         run: |
-          npm publish --registry=https://npm.pkg.github.com
+          npm publish
