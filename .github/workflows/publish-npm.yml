@@ -16,15 +16,16 @@ jobs:
         with:
           node-version: 14
 
+      - name: Generate Protobuf
+        run: make generate-protobuf
+        working-directory: ../../
+
       - name: Set NPM_TOKEN and .npmrc
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
           echo "@nagamoridaiki:registry=https://npm.pkg.github.com" >> ~/.npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Debug .npmrc
-        run: cat ~/.npmrc
 
       - name: Install npm
         run: npm install
@@ -34,6 +35,6 @@ jobs:
 
       - name: Publish to Private NPM Registry
         run: |
-          npm publish --registry=https://npm.pkg.github.com
+          cd generated && npm publish --registry=https://npm.pkg.github.com
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

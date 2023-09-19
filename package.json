@@ -1,16 +1,13 @@
 {
   "name": "@nagamoridaiki/invitation-proto",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nagamoridaiki/invitation-proto.git"
-  },
-  "author": "",
+  "repository": "git+https://github.com/nagamoridaiki/invitation-proto.git",
+  "author": "nagamoridaiki <no.swea1017@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nagamoridaiki/invitation-proto/issues"
@@ -18,5 +15,11 @@
   "homepage": "https://github.com/nagamoridaiki/invitation-proto#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.9.3",
+    "google-protobuf": "^3.21.2",
+    "grpc-tools": "^1.12.4",
+    "ts-protoc-gen": "^0.15.0"
   }
 }
