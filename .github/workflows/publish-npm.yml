@@ -19,6 +19,9 @@ jobs:
       - name: Install gRPC tools
         run: npm install -g grpc-tools
 
+      - name: Set PATH for node_modules/.bin
+        run: export PATH=$PATH:./node_modules/.bin
+
       - name: Generate Protobuf
         run: make generate-protobuf
         working-directory: .
