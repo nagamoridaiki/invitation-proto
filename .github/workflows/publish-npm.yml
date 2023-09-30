@@ -18,7 +18,7 @@ jobs:
 
       - name: Generate Protobuf
         run: make generate-protobuf
-        working-directory: ../../
+        working-directory: .
 
       - name: Set NPM_TOKEN and .npmrc
         run: |
