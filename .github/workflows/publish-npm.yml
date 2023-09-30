@@ -19,8 +19,17 @@ jobs:
       - name: Install gRPC tools
         run: npm install -g grpc-tools
 
+      - name: Install npm
+        run: npm install
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Set PATH for node_modules/.bin
         run: export PATH=$PATH:./node_modules/.bin
+
+      - name: check node_modules path
+        run: ls -la ./node_modules/.bin
 
       - name: Generate Protobuf
         run: make generate-protobuf
@@ -32,12 +41,6 @@ jobs:
           echo "@nagamoridaiki:registry=https://npm.pkg.github.com" >> ~/.npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Install npm
-        run: npm install
-
-      - name: Install dependencies
-        run: npm ci
 
       - name: Publish to Private NPM Registry
         run: |
