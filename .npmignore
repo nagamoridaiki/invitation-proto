@@ -1,0 +1,9 @@
+/node_modules/
+/.github/
+/proto
+/.gitignore/
+/Makefile
+/package-lock.json
+/package.json
+/yarn.lock
+/npmrc

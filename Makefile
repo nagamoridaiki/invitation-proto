@@ -1,7 +1,7 @@
 # Makefile
 
 PROTO_DIR := proto
-OUT_DIR := generated
+OUT_DIR := .
 
 generate-protobuf:
 	@mkdir -p $(OUT_DIR)
