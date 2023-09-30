@@ -44,6 +44,6 @@ jobs:
 
       - name: Publish to Private NPM Registry
         run: |
-          cd generated && npm publish --registry=https://npm.pkg.github.com
+          npm publish ./generated/ --registry=https://npm.pkg.github.com
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
