@@ -10,11 +10,11 @@ message Invitation {
 }
 
 message GetInvitationRequest{
-    int32 user_id = 1;
+    int32 invitation_id = 1;
 }
 
 message GetInvitationResponse {
-    Invitation user = 1;
+    Invitation invitation = 1;
 }
 
 
