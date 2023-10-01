@@ -17,7 +17,6 @@ message GetInvitationResponse {
     Invitation invitation = 1;
 }
 
-
 service invitationService{
     rpc GetInvitation (GetInvitationRequest) returns (GetInvitationResponse) {};
 }
