@@ -1,6 +1,5 @@
 /node_modules/
 /.github/
-/proto
 /.gitignore/
 /Makefile
 /package-lock.json
