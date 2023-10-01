@@ -1,7 +1,7 @@
 
 syntax = "proto3";
 
-package invitaion;
+package invitation;
 
 message Invitation {
     int32 invitation_id    = 1;
