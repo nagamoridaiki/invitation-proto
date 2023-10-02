@@ -17,7 +17,7 @@ jobs:
           node-version: 14
 
       - name: Install gRPC tools
-        run: npm install -g grpc-tools
+        run: npm install -g grpc-tools @bufbuild/protobuf @bufbuild/protoc-gen-es @bufbuild/buf
 
       - name: Install npm
         run: npm install
