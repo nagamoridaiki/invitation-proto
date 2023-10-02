@@ -17,6 +17,8 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
+    "@bufbuild/buf": "^1.26.1",
+    "@bufbuild/protobuf": "^1.3.1",
     "@grpc/grpc-js": "^1.9.3",
     "google-protobuf": "^3.21.2",
     "grpc-tools": "^1.12.4",
