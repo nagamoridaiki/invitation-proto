@@ -1,0 +1,12 @@
+version: v1
+
+plugins:
+  - plugin: buf.build/community/stephenh-ts-proto
+    out: ./gen/ts
+    opt:
+      - forceLong=string
+      - nestJs=true
+      - addGrpcMetadata=true
+      - addNestjsRestParameter=true
+      - lowerCaseServiceMethods=false
+      - useAsyncIterable=false
