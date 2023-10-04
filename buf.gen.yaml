@@ -10,3 +10,7 @@ plugins:
       - addNestjsRestParameter=true
       - lowerCaseServiceMethods=false
       - useAsyncIterable=false
+  - plugin: js
+    out: ./gen/web
+    opt:
+      - import_style=commonjs
