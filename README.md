@@ -1,5 +1,9 @@
 # invitation-proto
 
+### 事前にgithubのtokenを設定する
+githubのsecretにgithubのtoken(※npmのtokenではない）を登録すること。
+1回目で失敗するかもしれないが、何回かsecretをupdateしたら何故かうまくいった。
+
 ### github packageの更新方法
 
 package.jsonの
